@@ -1,0 +1,22 @@
+.homeHeadingContainer {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeHeadingContainer img {
+    width: 35px;
+}
+
+.homeHeadingContainer p {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.homeHeadingContainer h1 {
+    font-size: 33px;
+    color: rgb(71, 71, 71);
+}

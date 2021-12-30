@@ -1,0 +1,157 @@
+/*General style*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*Coin List*/
+
+.CoinList {
+    width: 90%;
+    max-width: 725px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+/*Coin*/
+
+.CoinContainer,
+.dataHeader {
+    background-color: white;
+    display: grid;
+    grid-template-columns: minmax(80px, 40px) minmax(150px, 200px) minmax(70px, 30px) minmax(150px, 100px) minmax(150px, 1fr);
+    padding: 8px;
+    align-items: center;
+}
+
+.CoinContainer {
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 10px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.dataHeader {
+    margin-bottom: 10px;
+}
+
+.CoinContainer:hover {
+    background-color: #F6F6F6;
+    transition: 0.3s ease-in-out;
+}
+
+#priceChange {
+    border-radius: 8px;
+    padding: 3px;
+    text-align: center;
+}
+
+.dataHeader p,
+.title {
+    color: dimgray;
+    font-weight: 700;
+}
+
+.title {
+    margin-bottom: 15px;
+}
+
+.CoinContainer img {
+    width: 50px;
+}
+
+.CoinContainer p {
+    font-size: 20px;
+}
+
+
+/*CoinDetail*/
+
+.coinDetailContainer {
+    padding: 20px;
+    margin: 100px auto;
+    width: 85%;
+    max-width: 650px;
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.coinDetailContainer img {
+    max-width: 100px;
+    margin-bottom: 8px;
+}
+
+.coinDetailHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coinDetailData {
+    margin-top: 25px;
+    padding: 15PX;
+    width: 60%;
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+    text-align: start;
+}
+
+.coinDetailData p {
+    margin-bottom: 30px;
+}
+
+.btnBack {
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid rgb(195, 192, 192);
+    cursor: pointer;
+}
+
+.btnBack:hover {
+    background-color: whitesmoke;
+}
+
+
+/*Mediq queries*/
+
+@media screen and (max-width:722px) {
+    #symbol {
+        display: none;
+    }
+    .CoinList,
+    .coinDetailData {
+        width: 100%;
+    }
+    .CoinContainer,
+    .dataHeader {
+        grid-template-columns: minmax(80px, 40px) minmax(150px, 200px) minmax(150px, 100px) minmax(150px, 1fr);
+    }
+}
+
+@media screen and (max-width:569px) {
+    #priceChange {
+        display: none;
+    }
+    .CoinContainer,
+    .dataHeader {
+        grid-template-columns: minmax(30px, 60px) minmax(100px, 1fr) minmax(0px, 1fr);
+    }
+    .CoinList {
+        padding: 10px;
+    }
+}
